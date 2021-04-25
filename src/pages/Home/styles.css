@@ -1,0 +1,38 @@
+.home-container{
+    padding:  180px 740px 600px 120px ;
+}
+
+.text-title {
+    width: 600px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #062847;
+
+}
+
+.text-subtitle li{
+    width: 600px;
+    padding-bottom: 20px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+
+}
+
+.btn-tostart {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background: #1890FF;
+    border-radius: 6px;
+    border:none;
+}
+
+.btn-tostart:hover{
+    background: #106fc7;
+}
