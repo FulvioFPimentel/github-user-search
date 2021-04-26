@@ -1,0 +1,15 @@
+.main-nav {
+    height: 70px;
+    background: #1890FF;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.nav-title {
+    font-style: normal;
+    font-weight: 500;
+    padding-left: 40px;
+    color: #FFFFFF;
+}

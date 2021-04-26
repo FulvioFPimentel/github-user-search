@@ -1,0 +1,12 @@
+.btn-tostart {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background: #1890FF;
+    border-radius: 6px;
+    border:none;
+}
+
+.btn-tostart:hover{
+    background: #106fc7;
+}

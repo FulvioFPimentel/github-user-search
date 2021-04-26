@@ -1,5 +1,5 @@
 .home-container{
-    padding:  180px 740px 600px 120px ;
+    padding:  180px 740px 150px 120px ;
 }
 
 .text-title {
@@ -22,17 +22,4 @@
     line-height: 36px;
     color: #5A6774;
 
-}
-
-.btn-tostart {
-    width: 100px;
-    height: 40px;
-    color: #fff;
-    background: #1890FF;
-    border-radius: 6px;
-    border:none;
-}
-
-.btn-tostart:hover{
-    background: #106fc7;
 }
