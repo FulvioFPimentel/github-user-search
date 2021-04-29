@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../assets/components/Button';
+import Button from '../../core/components/Button';
 import './styles.css';
 
 const Home = () => {

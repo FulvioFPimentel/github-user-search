@@ -1,41 +1,50 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import { makeRequest } from '../../core/utils/request'
 import './styles.css'
-import '../../assets/components/Button/styles.css'
+import '../../core/components/Button/styles.css'
+import BaseForm from './components/BaseForm';
+import SearchResult from './components/SearchResult';
+import { Values } from '../../core/types/Values';
+//import SearchResult from '../Search/components/SearchResult'
 
 
 const Search = () => {
 
+    const [valuesResult, setValuesResult] = useState<Values>();
+    const [isLoading, setIsLoading] = useState(false);
     const [name, setName] = useState('');
 
-    const handleOndChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
-        setName(event.target.value);
-    }
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
+      setName(event.target.value);
 
-    const handleClick = () => {
-        axios(`https://api.github.com/users/${name}`)
-        .then(Response => console.log(Response))
-       console.log({name})
+    }
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        setIsLoading(true);
+        event.preventDefault();
+         makeRequest({url:name})
+        .then(Response => setValuesResult(Response.data))
+        .finally(() => {
+        setIsLoading(false);
+        })
     }
 
     return(
-        <div className="search-container">
-            <div className="seatch-content">
-                <h1 className="text-seatch">Encontre um perfil Github</h1>
+        <form onSubmit={handleSubmit}>
+            <BaseForm title="Encontre um perfil Github">
                 <input 
                     value={name}
-                    className="form-control" 
-                    onChange={handleOndChange}
-                    type="text"/>
-                <div className="text-button"></div>
-                        <button 
-                            className="btn-tostart"
-                            onClick={handleClick}
-                        >
-                            Encontrar
-                        </button> 
-            </div>
-        </div>
+                    className="input-text" 
+                     onChange={handleOnChange}
+                type="text"/>
+                
+            </BaseForm>
+            {valuesResult && (
+                isLoading ? <h1>Carregando...</h1> : (
+                <SearchResult values={valuesResult}/>)
+            )}
+        
+        </form>
+
     );
 }
 
