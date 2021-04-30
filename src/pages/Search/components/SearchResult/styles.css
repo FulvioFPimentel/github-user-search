@@ -4,7 +4,7 @@
     background: #F5F5F5;
     border-radius: 16px;
     margin-top: 55px;
-    margin-left: 20px;
+    margin-left: 0px;
     padding-left: 30px;
 }
 
@@ -16,6 +16,7 @@
     width: 315px;
     height: 315px;
     margin-right:45px ;
+    margin-bottom: 20px;
 }
 
 .repository-details{
@@ -74,4 +75,18 @@
 .btn-tostart {
     margin-top: 17px;
 }
+
+.btn-profile {
+    color: #fff;
+    background: #1890FF;
+    border-radius: 6px;
+    border:none;
+    padding: 10px 20px 10px 20px; 
+}
+
+.btn-profile:hover{
+    background: #106fc7;
+}
+
+
 

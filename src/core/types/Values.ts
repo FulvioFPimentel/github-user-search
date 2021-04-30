@@ -8,5 +8,6 @@ export type Values = {
     blog: string;
     location: string;
     created_at: string
+    html_url: string
 
 }

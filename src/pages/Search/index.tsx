@@ -5,6 +5,8 @@ import '../../core/components/Button/styles.css'
 import BaseForm from './components/BaseForm';
 import SearchResult from './components/SearchResult';
 import { Values } from '../../core/types/Values';
+import PreLoader from './components/Loaders/preloader'
+
 //import SearchResult from '../Search/components/SearchResult'
 
 
@@ -30,21 +32,23 @@ const Search = () => {
 
     return(
         <div className="base-container">
-        <form className="form-container" onSubmit={handleSubmit}>
-            <BaseForm title="Encontre um perfil Github">
-                <input 
-                    value={name}
-                    className="input-text" 
-                     onChange={handleOnChange}
-                type="text"/>
+            <form className="form-container" onSubmit={handleSubmit}>
+                <BaseForm title="Encontre um perfil Github">
+                    <input 
+                        value={name}
+                        className="input-text" 
+                        onChange={handleOnChange}
+                    type="text"/>
+                    
+                </BaseForm>
                 
-            </BaseForm>
-            {valuesResult && (
-                isLoading ? <h1>Carregando...</h1> : (
-                <SearchResult values={valuesResult}/>)
-            )}
-        
-        </form>
+                    {isLoading ? <PreLoader /> : (
+                        valuesResult && (
+                        <SearchResult values={valuesResult}/>)
+                    )}
+ 
+            
+            </form>
         </div>
 
     );
