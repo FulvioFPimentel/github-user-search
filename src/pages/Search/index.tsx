@@ -29,7 +29,8 @@ const Search = () => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <div className="base-container">
+        <form className="form-container" onSubmit={handleSubmit}>
             <BaseForm title="Encontre um perfil Github">
                 <input 
                     value={name}
@@ -44,6 +45,7 @@ const Search = () => {
             )}
         
         </form>
+        </div>
 
     );
 }

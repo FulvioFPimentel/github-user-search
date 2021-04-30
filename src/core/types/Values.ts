@@ -1,12 +1,12 @@
 
 export type Values = {
-    respPublicos: string;
-    seguidores: string;
-    seguindo:string;
+    public_repos: number;
+    followers: number;
+    following: number;
     avatar_url: string;
-    empresa: string;
-    websiteBlog: string;
-    localidade: string;
-    dataMembro: string
+    company: string;
+    blog: string;
+    location: string;
+    created_at: string
 
 }

@@ -1,11 +1,10 @@
 .seatch-content {
 
-    width: 90vw;
-    min-width: 1250px;
+    width: 1365px;
     height: 270px;
     background: #E6F7FF;
     border-radius: 16px;
-    margin-left: 90px;
+    margin-left: 20px;
     margin-top: 60px;
     padding-left: 90px;
 }
